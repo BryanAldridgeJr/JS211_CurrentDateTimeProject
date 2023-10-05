@@ -1,0 +1,20 @@
+body {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(155, 155, 184);
+}
+
+h1 {
+    font-size: 30pt;
+    text-decoration: underline;
+}
+
+#firstbox,
+#compare,
+#calculate {
+    padding: 3% 3%;
+}
+
+#display-element {
+    padding-bottom: 3%;
+}

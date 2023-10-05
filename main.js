@@ -1,10 +1,13 @@
-// **THIS IS INCREDIBLY IMPORTANT THAT YOU DO BOTH SECTIONS!!! You will be doing only front-end work in 421 and you need to brush up on your HTML elements**
+//const formCalculate = document.querySelector('#calculate');
+const formCompare = document.querySelector('#compare');
+//const result1 = document.querySelector('#result1');
+//const result2 = document.querySelector('#result2');
+//const numberInput1 = document.querySelector('#firstNum')
+//const numberInput2 = document.querySelector('#secNum')
+//const textInput1 = document.querySelector('#firText')
+//const textInput2 = document.querySelector('#secText')
+//const operation = document.querySelector('#selector')
 
-
-// ***************************
-//          PART ONE
-// ***************************
-// Write a JavaScript program to display the current day and time, start with:
 console.log(new Date)
 
 const displayDate = () => {
@@ -13,55 +16,96 @@ const displayDate = () => {
   document.getElementById("display-element").innerHTML = currentDate;
 }
  
+const formCalculate = document.querySelector('#calculate');
 
-// Write a JavaScript program to convert a number to a string.
-
-
-
-// Write a JavaScript program to convert a string to the number.
-
-
-
-// Write a JavaScript program that takes in different datatypes and prints out whether they are a:
-  // * Boolean
-  // * Null
-  // * Undefined
-  // * Number
-  // * NaN
-  // * String
+formCalculate.addEventListener('submit', function(event) {
+  event.preventDefault(); 
   
+  const result1 = document.querySelector('#result1');
+  const firstNum = parseFloat(document.querySelector('#firstNum').value);
+  const secNum = parseFloat(document.querySelector('#secNum').value);
+  const operation = document.querySelector('#selector').value;
 
+  let calculationResult;
+
+  switch (operation) {
+    case 'addition':
+      calculationResult = firstNum + secNum;
+      break;
+    case 'multiplication':
+      calculationResult = firstNum * secNum;
+      break;
+    case 'subtraction':
+      calculationResult = firstNum - secNum;
+      break;
+    case 'division':
+      calculationResult = firstNum / secNum;
+      break;
+    default:
+      calculationResult = 'Invalid operation';
+  }
+
+  //console.log(calculationResult)
+  result1.textContent = 'Result: ' + calculationResult;
+});
+
+
+function isFalsy(value) {
+  if (value === 'undefined') {
+    return true;
+  } else if (value === 'null') {
+    return true;
+  } else if (value === 'false') {
+    return true;
+  } else if (value === 'NaN') {
+    return true;
+  } else if (value === '0') {
+    return true;
+  } else if (value === '-0') {
+    return true;
+  } else if (value === '0n') {
+    return true;
+  } else if (value === '') {
+    return true;
+  } else if (value === "") {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
+formCompare.addEventListener('submit', function(event) {
+  event.preventDefault(); 
+
+  const textInput1 = document.querySelector('#firText')
+  const textInput2 = document.querySelector('#secText')
+  //const textInput1 = parseFloat(document.querySelector('#firText').value);
+  //const textInput2 = parseFloat(document.querySelector('#secText').value);
+  const result2 = document.querySelector('#result2');
+  const result3 = document.querySelector('#result3');
+
+  console.log(textInput2)
+  console.log(textInput1)
   
-// Write a JavaScript program that adds 2 numbers together.
+  
+  if (!isFalsy(textInput1.value)) {
+    result2.textContent = textInput1.value + ' is a truthy value';
+  } else {  
+    result2.textContent = textInput1.value + ' is a falsey value';
+  }
+  
+    //result2.textContent = `First Text is ${textInput1} and Second Text is ${secTextStatus}`
+  if (!isFalsy(textInput2.value)) {
+    result3.textContent = `${textInput2.value} is a truthy value`;
+  } else {  
+    result3.textContent = `${textInput2.value} is a falsey value`;
+  }
+   
+  //let trueFalsy;
 
 
+  //console.log(calculationResult)
+  //result2.textContent = 'Result: ' + calculationResult;
+});
 
-// Write a JavaScript program that runs only when 2 things are true.
-
-
-
-// Write a JavaScript program that runs when 1 of 2 things are true.
-
-
-
-// Write a JavaScript program that runs when both things are not true.  
-
-// ***************************
-//         PART TWO
-// ***************************
-
-// 1. download Live-Server by Ritwick Dey, 
-// 2. reload VS Code, 
-// 3. click the "Go Live" button
-// 4. Go local host 5500 or http://127.0.0.1:5500/index.html to see your web page
-// 5. Or go use the `npm start` command and navigate to localhost:8080 (ctrl + C to close)
-// 6. go to `index.html` 
-// 7. create inputs, buttons and event listeners that render the code blocks you built above to the DOM.
-
-
-
-
-// Additional Resources
-// Video1: https://player.vimeo.com/video/377147232
-// Video2: https://www.youtube.com/embed/bkvH28PXLWc
-// Video3: https://www.youtube.com/embed/TrGI9Yki-24

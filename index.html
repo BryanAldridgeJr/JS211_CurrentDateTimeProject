@@ -2,14 +2,44 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="./style.css"> 
+    <title>DATE & Time</title>
   </head>
   <body>
     <h1>Hello World!</h1>
     <hr/>
-    <div id="display-element"></div>
-    <button onclick="displayDate()">Click Me</button>
+    <div id="firstbox">
+      <div id="display-element"></div>
+      <button onclick="displayDate()">Click Me</button>
+    </div>
     <hr/>
+    <form id="calculate">
+      <input type="number" id="firstNum" name="firstNumber" placeholder="First Number"/>
+      <input type="number" id="secNum" name="secondNumber" placeholder="Second Number"/>
+      <select id="selector">
+        <option value="addition">Add</option>
+        <option value="multiplication">Multiply</option>
+        <option value="subtraction">Subtract</option>
+        <option value="division">Division</option>
+      </select>
+      <input type="submit" value="Calculate" />
+    </form>
+    <br>
+    <div id="result1"></div>
+    <hr/>
+    <form id="compare">
+      <input type="text" id="firText" name="firstText" placeholder="First Word/Number"/>
+      <input type="text" id="secText" name="secondText" placeholder="Second Word/Number"/>
+      <input type="submit" value="Compare" />
+    </form>
+    <br>
+    <div id="result2"></div>
+    <div id="result3"></div>
+    <hr/>
+
+
+
+
+    <script src="main.js"></script>
   </body>
 </html>
