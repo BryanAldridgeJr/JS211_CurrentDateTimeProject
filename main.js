@@ -5,7 +5,8 @@ const displayDate = () => {
 
   document.getElementById("display-element").innerHTML = currentDate;
 }
- 
+
+
 const formCalculate = document.querySelector('#calculate');
 
 formCalculate.addEventListener('submit', function(event) {
@@ -35,7 +36,7 @@ formCalculate.addEventListener('submit', function(event) {
       calculationResult = 'Invalid operation';
   }
 
-  //console.log(calculationResult)
+  console.log(calculationResult)
   result1.textContent = 'Result: ' + calculationResult;
 });
 
@@ -74,8 +75,8 @@ formCompare.addEventListener('submit', function(event) {
   const result2 = document.querySelector('#result2');
   const result3 = document.querySelector('#result3');
 
-  console.log(textInput2)
-  console.log(textInput1)
+  //console.log(textInput2)
+  //console.log(textInput1)
   
   
   if (!isFalsy(textInput1.value)) {
@@ -89,5 +90,8 @@ formCompare.addEventListener('submit', function(event) {
   } else {  
     result3.textContent = `${textInput2.value} is a falsey value`;
   }
+
+  console.log(result2)
+  console.log(result3)
 });
 
