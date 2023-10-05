@@ -1,13 +1,3 @@
-//const formCalculate = document.querySelector('#calculate');
-const formCompare = document.querySelector('#compare');
-//const result1 = document.querySelector('#result1');
-//const result2 = document.querySelector('#result2');
-//const numberInput1 = document.querySelector('#firstNum')
-//const numberInput2 = document.querySelector('#secNum')
-//const textInput1 = document.querySelector('#firText')
-//const textInput2 = document.querySelector('#secText')
-//const operation = document.querySelector('#selector')
-
 console.log(new Date)
 
 const displayDate = () => {
@@ -74,14 +64,13 @@ function isFalsy(value) {
   }
 }
 
+const formCompare = document.querySelector('#compare');
 
 formCompare.addEventListener('submit', function(event) {
   event.preventDefault(); 
 
   const textInput1 = document.querySelector('#firText')
   const textInput2 = document.querySelector('#secText')
-  //const textInput1 = parseFloat(document.querySelector('#firText').value);
-  //const textInput2 = parseFloat(document.querySelector('#secText').value);
   const result2 = document.querySelector('#result2');
   const result3 = document.querySelector('#result3');
 
@@ -95,17 +84,10 @@ formCompare.addEventListener('submit', function(event) {
     result2.textContent = textInput1.value + ' is a falsey value';
   }
   
-    //result2.textContent = `First Text is ${textInput1} and Second Text is ${secTextStatus}`
   if (!isFalsy(textInput2.value)) {
     result3.textContent = `${textInput2.value} is a truthy value`;
   } else {  
     result3.textContent = `${textInput2.value} is a falsey value`;
   }
-   
-  //let trueFalsy;
-
-
-  //console.log(calculationResult)
-  //result2.textContent = 'Result: ' + calculationResult;
 });
 
