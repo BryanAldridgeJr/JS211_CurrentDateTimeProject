@@ -36,7 +36,7 @@ formCalculate.addEventListener('submit', function(event) {
       calculationResult = 'Invalid operation';
   }
 
-  console.log(calculationResult)
+  //console.log(calculationResult)
   result1.textContent = 'Result: ' + calculationResult;
 });
 
@@ -80,9 +80,9 @@ formCompare.addEventListener('submit', function(event) {
   
   
   if (!isFalsy(textInput1.value)) {
-    result2.textContent = textInput1.value + ' is a truthy value';
+    result2.textContent = `${textInput1.value} is a truthy value`;
   } else {  
-    result2.textContent = textInput1.value + ' is a falsey value';
+    result2.textContent = `${textInput1.value} is a falsey value`;
   }
   
   if (!isFalsy(textInput2.value)) {
